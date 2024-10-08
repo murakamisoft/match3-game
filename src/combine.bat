@@ -7,7 +7,7 @@ set outputFile=combined.txt
 rem 出力ファイルを初期化（既存の内容を削除）
 > "%outputFile%" (
     rem 最初のファイルを追加
-    echo 最新のソース一覧
+    echo 以下が最新のソース一覧
 )
 
 rem 各JSXファイルの内容を追加

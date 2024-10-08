@@ -1,12 +1,11 @@
+/* src/css/Piece.css */
+
 .piece {
   width: 50px;
-  /* ピースのサイズ */
   height: 50px;
-  /* ピースのサイズ */
   border: 1px solid #000;
   display: inline-block;
   transition: background-color 0.3s, transform 0.5s;
-  /* 背景色と移動のトランジション */
 }
 
 .piece.red {
@@ -29,21 +28,25 @@
   background-color: purple;
 }
 
-
-/* ピースが落ちてくるアニメーション */
-@keyframes fall {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
+/* 消えるアニメーション */
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
 
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
   }
 }
 
-.falling {
-  animation: fall 0.5s ease forwards;
-  /* 0.5秒で落ちるアニメーション */
+.disappearing {
+  animation: disappear 0.5s forwards;
+  /* 0.5秒で消えるアニメーション */
 }
