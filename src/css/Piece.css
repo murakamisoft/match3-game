@@ -1,0 +1,40 @@
+.piece {
+  width: 50px;
+  /* ピースのサイズ */
+  height: 50px;
+  /* ピースのサイズ */
+  border: 1px solid #000;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.5s;
+  /* 背景色と移動のトランジション */
+}
+
+.piece.red {
+  background-color: red;
+}
+
+.piece.green {
+  background-color: green;
+}
+
+.piece.blue {
+  background-color: blue;
+}
+
+/* ピースが落ちてくるアニメーション */
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.falling {
+  animation: fall 0.5s ease forwards;
+  /* 0.5秒で落ちるアニメーション */
+}
