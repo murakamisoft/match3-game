@@ -21,6 +21,15 @@
   background-color: blue;
 }
 
+.piece.yellow {
+  background-color: yellow;
+}
+
+.piece.purple {
+  background-color: purple;
+}
+
+
 /* ピースが落ちてくるアニメーション */
 @keyframes fall {
   from {

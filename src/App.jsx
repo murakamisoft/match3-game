@@ -5,7 +5,6 @@ import './css/App.css';
 import getRandomPiece from './utils/getRandomPiece';
 import checkForMatches from './utils/checkForMatches';
 
-// src/App.jsx
 const createInitialBoard = (rows, cols) => {
   const board = Array.from({ length: rows }, () =>
     Array.from({ length: cols }, getRandomPiece)
@@ -16,6 +15,7 @@ const createInitialBoard = (rows, cols) => {
 const App = () => {
   const [board, setBoard] = useState(createInitialBoard(6, 6));
   const [selectedPiece, setSelectedPiece] = useState(null);
+  console.log("Current Board:", board);
 
   const handlePieceClick = (rowIndex, colIndex) => {
     if (selectedPiece) {
